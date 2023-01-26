@@ -1,0 +1,43 @@
+@model SchoolManagement.MVC.Data.Course
+
+@{
+    ViewData["Title"] = "Detalles de la Asignatura";
+}
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Courses" asp-action="Index">Asignaturas</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Detalles de la Asignatura</li>
+    </ol>
+</nav>
+
+<h2>Detalles de la Asignatura</h2>
+
+<div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Code)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.Code)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Credits)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.Credits)
+            </dd>
+        </dl>
+</div>
+<div>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> 
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+</div>
