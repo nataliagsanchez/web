@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Classes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
