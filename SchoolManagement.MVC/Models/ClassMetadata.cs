@@ -7,21 +7,17 @@ public class ClassMetadata
 {
     public int Id { get; set; }
 
-    [Display(Name = "Id del Profesor")]
+    [Display(Name = "Profesor")]
     public int? LecturerId { get; set; }
-
-    [Display(Name = "Id de la Asignatura")]
+    [Display(Name = "Asignatura")]
     public int? CourseId { get; set; }
-
-    [Display(Name = "Hora a la que comienza la clase")]
+    [Display(Name = "Hora")]
     public TimeSpan? Time { get; set; }
-
-    [Display(Name = "Id de la Asignatura")]
+    [Display(Name = "Asignatura")]
     public virtual Course? Course { get; set; }
 
     public virtual ICollection<Enrollment> Enrollments { get; } = new List<Enrollment>();
-
-    [Display(Name = "Id del Profesor")]
+    [Display(Name = "Profesor")]
     public virtual Lecturer? Lecturer { get; set; }
 }
 

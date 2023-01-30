@@ -38,15 +38,16 @@
                 @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Course.Id)
+                @item.Course.Code - @item.Course.Name
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lecturer.Id)
+                @item.Lecturer.FirstName @item.Lecturer.LastName
             </td>
             <td>
                 <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                 <a class="btn text-light" style="background-color: #286ce6" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                 <button data-id="@item.Id" class="btn text-light deleteBtn" style="background-color: #286ce6" type="button">Eliminar</button>
+                <a class="btn text-light" style="background-color: #286ce6" asp-action="ManageEnrollments" asp-route-id="@item.Id">Gestionar Matriculas</a>
             </td>
         </tr>
 }
