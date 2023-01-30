@@ -47,7 +47,7 @@
                 <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                 <a class="btn text-light" style="background-color: #286ce6" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                 <button data-id="@item.Id" class="btn text-light deleteBtn" style="background-color: #286ce6" type="button">Eliminar</button>
-                <a class="btn text-light" style="background-color: #286ce6" asp-action="ManageEnrollments" asp-route-id="@item.Id">Gestionar Matriculas</a>
+                    <a class="btn text-light" style="background-color: #286ce6" asp-action="ManageEnrollments" asp-route-id="@item.Id">Gestionar Matriculas</a>
             </td>
         </tr>
 }
@@ -67,10 +67,10 @@
     </script>
 
     @if (User.Identity.IsAuthenticated)
-    {
-        <script>
-            $(function () {
-                $('.deleteBtn').click(function (e) {
+{
+    <script>
+        $(function () {
+            $('.deleteBtn').click(function (e) {
                     Swal.fire({
                         title: 'Are you sure?',
                         text: "You won't be able to revert this!",
@@ -88,12 +88,13 @@
                             )
                             var btn = $(this);
                             var id = btn.data("id");
-                            $('#courseid').val(id);
-                            $('#courseDeleteForm').submit();
+                            $('#classid').val(id);
+                            $('#classDeleteForm').submit();
                         }
                     })
                 })
             })
-        </script>
+        })
+    </script>
     }
 }

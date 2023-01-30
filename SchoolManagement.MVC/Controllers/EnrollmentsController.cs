@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +26,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Enrollments/Details/5
-        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Enrollments == null)
@@ -48,7 +46,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Enrollments/Create
-        [Authorize]
         public IActionResult Create()
         {
             ViewData["ClassId"] = new SelectList(_context.Classes, "Id", "Id");
@@ -75,7 +72,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Enrollments/Edit/5
-        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Enrollments == null)
@@ -96,7 +92,6 @@ namespace SchoolManagement.MVC.Controllers
         // POST: Enrollments/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,StudentId,ClassId,Grade")] Enrollment enrollment)
@@ -132,7 +127,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Enrollments/Delete/5
-        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Enrollments == null)
@@ -153,7 +147,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // POST: Enrollments/Delete/5
-        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

@@ -1,7 +1,6 @@
 ﻿namespace SchoolManagement.MVC.Models;
 
-public class StudentEnrollmentViewModel {
-    
+public class StudentEnrollmentViewModel { 
     public int Id { get; set; }
 
     public string FirstName { get; set; }

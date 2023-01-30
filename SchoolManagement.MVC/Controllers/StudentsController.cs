@@ -141,6 +141,7 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // POST: Students/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
