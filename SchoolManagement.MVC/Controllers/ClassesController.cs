@@ -220,7 +220,7 @@ namespace SchoolManagement.MVC.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(ManageEnrollments), new { id = classId});
         }
 
         private bool ClassExists(int id)
