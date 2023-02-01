@@ -50,7 +50,7 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Lecturers/Create
-        [Authorize]
+        
         public IActionResult Create()
         {
             return View();
