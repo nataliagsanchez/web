@@ -128,6 +128,7 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Lecturers/Delete/5
+        // Borrado con autorizacion
         [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
