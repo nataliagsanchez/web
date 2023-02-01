@@ -275,3 +275,6 @@ C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Deb
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\Auth0.AspNetCore.Authentication.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\AspNetCoreHero.ToastNotification.Views.dll
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\AspNetCoreHero.ToastNotification.dll
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.MvcApplicationPartsAssemblyInfo.cs

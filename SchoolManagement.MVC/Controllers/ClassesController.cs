@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,10 +15,12 @@ namespace SchoolManagement.MVC.Controllers
     public class ClassesController : Controller
     {
         private readonly SchoolManagementDbContext _context;
+        private readonly INotyfService _notyfService;
 
-        public ClassesController(SchoolManagementDbContext context)
+        public ClassesController(SchoolManagementDbContext context, INotyfService notyfService)
         {
             _context = context;
+            this._notyfService = notyfService;
         }
 
         // GET: Classes
@@ -67,6 +70,7 @@ namespace SchoolManagement.MVC.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(@class);
+                _notyfService.Information($"Clase creada con éxito");
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -110,6 +114,7 @@ namespace SchoolManagement.MVC.Controllers
                 try
                 {
                     _context.Update(@class);
+                    _notyfService.Information($"Clase editada con éxito");
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -164,6 +169,7 @@ namespace SchoolManagement.MVC.Controllers
             if (@class != null)
             {
                 _context.Classes.Remove(@class);
+                _notyfService.Information($"Clase eliminada con éxito");
             }
             
             await _context.SaveChangesAsync();
@@ -209,6 +215,7 @@ namespace SchoolManagement.MVC.Controllers
                 enrollment.StudentId = studentId;
 
                 await _context.AddAsync(enrollment);
+                _notyfService.Information($"Estudiante matriculado con éxito");
             }
             else {
                 enrollment = await _context.Enrollments.FirstOrDefaultAsync(
@@ -216,6 +223,7 @@ namespace SchoolManagement.MVC.Controllers
 
                 if (enrollment != null) {
                     _context.Remove(enrollment);
+                    _notyfService.Information($"Estudiante desmatriculado con éxito");
                 }
             }
 

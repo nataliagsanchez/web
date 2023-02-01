@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,10 +14,12 @@ namespace SchoolManagement.MVC.Controllers
     public class StudentsController : Controller
     {
         private readonly SchoolManagementDbContext _context;
+        private readonly INotyfService _notyfService;
 
-        public StudentsController(SchoolManagementDbContext context)
+        public StudentsController(SchoolManagementDbContext context, INotyfService notyfService)
         {
             _context = context;
+            this._notyfService = notyfService;
         }
 
         // GET: Students
@@ -63,6 +66,7 @@ namespace SchoolManagement.MVC.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(student);
+                _notyfService.Information($"Perfil de estudiante creado con éxito");
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -103,6 +107,7 @@ namespace SchoolManagement.MVC.Controllers
                 try
                 {
                     _context.Update(student);
+                    _notyfService.Information($"Perfil de estudiante editado con éxito");
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -154,8 +159,9 @@ namespace SchoolManagement.MVC.Controllers
             if (student != null)
             {
                 _context.Students.Remove(student);
+                _notyfService.Information($"Perfil de estudiante eliminado con éxito");
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

@@ -1,10 +1,10 @@
-﻿<ul class="navbar">
+﻿
+<ul class="nav">
     @if (User.Identity.IsAuthenticated)
     {
         <li class="nav-item">
             <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Profile">@User.Identity.Name</a>
-        </li>    
-        <li class="nav-item">|</li>
+        </li>
         <li class="nav-item">
             <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
         </li>

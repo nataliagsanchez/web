@@ -67,10 +67,10 @@
     </script>
 
     @if (User.Identity.IsAuthenticated)
-{
-    <script>
-        $(function () {
-            $('.deleteBtn').click(function (e) {
+    {
+        <script>
+            $(function () {
+                $('.deleteBtn').click(function (e) {
                     Swal.fire({
                         title: 'Are you sure?',
                         text: "You won't be able to revert this!",
@@ -94,7 +94,6 @@
                     })
                 })
             })
-        })
-    </script>
+        </script>
     }
 }

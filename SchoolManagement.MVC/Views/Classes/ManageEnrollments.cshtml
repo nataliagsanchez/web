@@ -4,6 +4,14 @@
     ViewData["Title"] = "Gestionar Matrículas";
 }
 
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+        <li class="breadcrumb-item active"><a asp-area="" asp-controller="Classes" asp-action="Index">Clases</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gestionar Matriculas</li>
+    </ol>
+</nav>
+
 <h3>Gestion de Matriculas para la sesión de @Model.Class.Time de la asignatura @Model.Class.Course.Name</h3>
 <h4>Profesor: @Model.Class.Lecturer.FirstName @Model.Class.Lecturer.LastName</h4>
 

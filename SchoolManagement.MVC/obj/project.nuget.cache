@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kxtTIMDqyekTtWwI+9xs6QiL8Z4igk9p6VZG5J2sXupMcOgOTaLqEsBiKqxYFZpNiHfvjg5Ne3If8I/s6f/PTA==",
+  "dgSpecHash": "TOagfj5wK6DvAfqPPJzfNKHZdkB3eSNriGh17WE8doPfNblMMr8/2OhP1JyvgpvtU1iCeCXkmE750mS3ysX73A==",
   "success": true,
   "projectFilePath": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\SchoolManagement.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\GarciaSN\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\GarciaSN\\.nuget\\packages\\auth0.aspnetcore.authentication\\1.1.0\\auth0.aspnetcore.authentication.1.1.0.nupkg.sha512",
     "C:\\Users\\GarciaSN\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\GarciaSN\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
