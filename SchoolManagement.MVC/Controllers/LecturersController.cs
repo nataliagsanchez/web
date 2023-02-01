@@ -59,6 +59,7 @@ namespace SchoolManagement.MVC.Controllers
         // POST: Lecturers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName")] Lecturer lecturer)
@@ -128,7 +129,6 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Lecturers/Delete/5
-        // Borrado con autorizacion
         [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
