@@ -55,7 +55,12 @@
     <script>
         $(function() {
             $('.table').DataTable();
+        })
+    </script>
 
+    @if (User.Identity.IsAuthenticated)
+    {
+        <script>
             $(function () {
                 $('.enrollmentBtn').click(function (e) {
                     Swal.fire({
@@ -80,4 +85,5 @@
             })
         })
     </script>
+    }
 }
