@@ -176,6 +176,7 @@ namespace SchoolManagement.MVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         public async Task<ActionResult> ManageEnrollments(int id) {
 
             var @class = await _context.Classes

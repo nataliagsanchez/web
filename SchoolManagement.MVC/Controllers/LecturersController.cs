@@ -50,7 +50,7 @@ namespace SchoolManagement.MVC.Controllers
         }
 
         // GET: Lecturers/Create
-        
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -59,7 +59,6 @@ namespace SchoolManagement.MVC.Controllers
         // POST: Lecturers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName")] Lecturer lecturer)
@@ -94,7 +93,6 @@ namespace SchoolManagement.MVC.Controllers
         // POST: Lecturers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName")] Lecturer lecturer)
