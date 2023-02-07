@@ -12,13 +12,13 @@
     </ol>
 </nav>
 
-<h3>Gestion de Matriculas para la sesión de @Model.Class.Time de la asignatura @Model.Class.Course.Name</h3>
-<h4>Profesor: @Model.Class.Lecturer.FirstName @Model.Class.Lecturer.LastName</h4>
+<h3>Gestion de Matriculas para la sesión de @Model.Class?.Time de la asignatura @Model.Class?.Course?.Name</h3>
+<h4>Profesor: @Model.Class?.Lecturer?.FirstName @Model.Class?.Lecturer?.LastName</h4>
 
 <hr />
 <h3>Lista de Estudiantes</h3>
 
-<table class="table">
+<table class="table  table-striped" style="background-color: #f2f8fd">
     <thead>
         <tr>
             <th>Nombre</th>
@@ -46,7 +46,7 @@
 </table>
 
 <form asp-action="EnrollStudent" id="classEnrollmentForm">
-    <input type="hidden" id="classid" name="ClassId" value="@Model.Class.Id" />
+    <input type="hidden" id="classid" name="ClassId" value="@Model.Class?.Id" />
     <input type="hidden" id="studentId" name="StudentId"/>
     <input type="hidden" id="shouldEnroll" name="ShouldEnroll"/>
 </form>
@@ -58,6 +58,8 @@
         })
     </script>
 
+    @if (User.Identity is not null)
+{
     @if (User.Identity.IsAuthenticated)
     {
         <script>
@@ -86,4 +88,5 @@
         })
     </script>
     }
+}
 }

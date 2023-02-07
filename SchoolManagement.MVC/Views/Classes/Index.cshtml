@@ -16,8 +16,8 @@
 <p>
     <a class="btn text-light" style="background-color: #286ce6" asp-action="Create">Nueva Clase</a>
 </p>
-<table class="table">
-    <thead style="color: #286ce6">
+<table class="table table-striped" style="background-color: #f2f8fd">
+    <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Time)
@@ -38,10 +38,10 @@
                 @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
-                @item.Course.Code - @item.Course.Name
+                @item.Course?.Code - @item.Course?.Name
             </td>
             <td>
-                @item.Lecturer.FirstName @item.Lecturer.LastName
+                @item.Lecturer?.FirstName @item.Lecturer?.LastName
             </td>
             <td>
                 <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
@@ -65,7 +65,8 @@
             $('.table').DataTable();
         })
     </script>
-
+    @if (User.Identity is not null)
+{
     @if (User.Identity.IsAuthenticated)
     {
         <script>
@@ -96,4 +97,5 @@
             })
         </script>
     }
+}
 }

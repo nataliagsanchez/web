@@ -16,8 +16,8 @@
 <p>
     <a class="btn text-light" style="background-color: #286ce6" asp-action="Create">Nuevo Profesor</a>
 </p>
-<table class="table">
-    <thead style="color: #286ce6">
+<table class="table table-striped" style="background-color: #f2f8fd">
+    <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -58,7 +58,8 @@
             $('.table').DataTable();
         })
     </script>
-
+    @if (User.Identity is not null)
+{
     @if (User.Identity.IsAuthenticated)
 {
     <script>
@@ -89,4 +90,5 @@
             })
         </script>
     }
+}
 }

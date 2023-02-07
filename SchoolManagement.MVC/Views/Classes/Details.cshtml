@@ -27,13 +27,13 @@
             @Html.DisplayNameFor(model => model.Course)
         </dt>
         <dd class = "col-sm-6">
-            @Model.Course.Code - @Model.Course.Name
+            @Model.Course?.Code - @Model.Course?.Name
         </dd>
         <dt class = "col-sm-4">
             @Html.DisplayNameFor(model => model.Lecturer)
         </dt>
         <dd class = "col-sm-6">
-            @Model.Lecturer.FirstName @Model.Lecturer.LastName
+            @Model.Lecturer?.FirstName @Model.Lecturer?.LastName
         </dd>
     </dl>
 </div>
