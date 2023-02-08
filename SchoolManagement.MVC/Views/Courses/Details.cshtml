@@ -15,29 +15,42 @@
 <h2>Detalles de la Asignatura</h2>
 
 <div>
-        <hr />
-        <dl class="row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-            <dd class="col-sm-6">
-                @Html.DisplayFor(model => model.Name)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Code)
-            </dt>
-            <dd class="col-sm-6">
-                @Html.DisplayFor(model => model.Code)
-            </dd>
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Credits)
-            </dt>
-            <dd class="col-sm-6">
-                @Html.DisplayFor(model => model.Credits)
-            </dd>
-        </dl>
+    <hr />
+    <center>
+        <div class="card" style="background-color: #f2f8fd">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Code)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Code)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Credits)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Credits)
+                    </dd>
+                </dl>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </center>
 </div>
+
+<br />
+
 <div>
-        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> 
+    <center>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
         <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+    </center>
 </div>

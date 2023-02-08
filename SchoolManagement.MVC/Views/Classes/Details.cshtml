@@ -16,28 +16,41 @@
 
 <div>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-4">
-            @Html.DisplayNameFor(model => model.Time)
-        </dt>
-        <dd class = "col-sm-6">
-            @Html.DisplayFor(model => model.Time)
-        </dd>
-        <dt class = "col-sm-4">
-            @Html.DisplayNameFor(model => model.Course)
-        </dt>
-        <dd class = "col-sm-6">
-            @Model.Course?.Code - @Model.Course?.Name
-        </dd>
-        <dt class = "col-sm-4">
-            @Html.DisplayNameFor(model => model.Lecturer)
-        </dt>
-        <dd class = "col-sm-6">
-            @Model.Lecturer?.FirstName @Model.Lecturer?.LastName
-        </dd>
-    </dl>
+    <center>
+        <div class="card" style="background-color: #f2f8fd">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Time)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.Time)
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Course)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Model.Course?.Code - @Model.Course?.Name
+                    </dd>
+                    <dt class="col-sm-6">
+                        @Html.DisplayNameFor(model => model.Lecturer)
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Model.Lecturer?.FirstName @Model.Lecturer?.LastName
+                    </dd>
+                </dl>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </center>
 </div>
+
+<br />
+
 <div>
-    <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
-    <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+    <center>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+    </center>
 </div>
