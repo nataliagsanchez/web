@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Calendario";
+}
+
+<link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+
+<div id="container">
+    <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+            <button type="button" class="btn" id="backButton">Anterior</button>
+            <button type="button" class="btn" id="nextButton">Siguiente</button>
+        </div>
+    </div>
+
+    <div id="weekdays">
+        <div>Lunes</div>
+        <div>Martes</div>
+        <div>Miércoles</div>
+        <div>Jueves</div>
+        <div>Viernes</div>
+        <div>Sábado</div>
+        <div>Domingo</div>
+    </div>
+
+    <div id="calendar"></div>
+</div>
+
+<div id="newEventModal">
+    <h2>Nuevo Evento</h2>
+
+    <input id="eventTitleInput" placeholder="Nombre del Evento"/>
+
+    <button id="saveButton" class="btn">Guardar</button>
+    <button id="cancelButton" class="btn">Cancelar</button>
+</div>
+
+<div id="deleteEventModal">
+    <center><h3>Evento</h3></center>
+
+    <p id="eventText"></p>
+
+    <button id="deleteButton" class="btn">Borrar</button>
+    <button id="closeButton" class="btn">Cerrar</button>
+</div>
+
+<div id="modalBackDrop"></div>
+
+<script src="~/js/script.js"></script>

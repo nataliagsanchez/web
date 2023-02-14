@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I9CsjDyd1Vi7dqNSZTtzHV6VbSgAPbCaO3QOPTFJP0s=",
+  "Hash": "rWaobwwE9d/xoe2WRP1bzfwxuOnDW2qEALUQfomSziQ=",
   "Source": "SchoolManagement.MVC",
   "BasePath": "_content/SchoolManagement.MVC",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\css\\styles.css",
+      "SourceId": "SchoolManagement.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\",
+      "BasePath": "_content/SchoolManagement.MVC",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
       "Identity": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\favicon.jpg",
       "SourceId": "SchoolManagement.MVC",
       "SourceType": "Discovered",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\js\\script.js",
+      "SourceId": "SchoolManagement.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\",
+      "BasePath": "_content/SchoolManagement.MVC",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
       "Identity": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\js\\site.js",

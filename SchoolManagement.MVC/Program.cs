@@ -18,6 +18,8 @@ builder.Services
         });
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
 builder.Services.AddNotyf(c => {
     c.DurationInSeconds = 5;
     c.IsDismissable = true;

@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\favicon.jpg",
       "PackagePath": "staticwebassets\\favicon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "C:\\Users\\GarciaSN\\source\\repos\\SchoolManagement.MVC\\SchoolManagement.MVC\\wwwroot\\js\\site.js",

@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Calendar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Classes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Home/About.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GarciaSN/source/repos/SchoolManagement.MVC/SchoolManagement.MVC/Views/Home/Index.cshtml]

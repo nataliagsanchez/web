@@ -35,8 +35,6 @@
                             </ul>
                         </li>
 
-                        <li><div class="vr" style="color: white; height: 40px"></div></li>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Nuestro Personal y Alumnado</a>
                             <ul class="dropdown-menu w-100">
@@ -49,14 +47,11 @@
                                 </li>
                             </ul>
                         </li>
-                        
-                        <li><div class="vr" style="color: white; height: 40px"></div></li>
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Respecto a la Web</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About"><center>Sobre Nosotros</center></a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Gestión de Eventos</a>
+                            <ul class="dropdown-menu w-100">
+                                <li>
+                                    <a class="nav-link" asp-area="" asp-controller="Calendar" asp-action="Index"><center>Calendario</center></a>
                                 </li>
                             </ul>
                         </li>
@@ -71,7 +66,7 @@
             @RenderBody()
         </main>
     </div>
-
+    <br />
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; @DateTime.Now.Year - School Management App MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Nuestras Políticas de Pivacidad</a>
