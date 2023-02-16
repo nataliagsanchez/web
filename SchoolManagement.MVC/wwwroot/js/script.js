@@ -62,7 +62,7 @@ function carga() {
     const paddingDays = diasSemana.indexOf(dateString.split(', ')[0]);
 
     document.getElementById('monthDisplay').innerText =
-        `${dt.toLocaleDateString('es-es', { month: 'long' })} ${year}`;
+        `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
     calendario.innerHTML = ''; //El contenido del calendario (los cuadrados de cada día) se vacía.
 
