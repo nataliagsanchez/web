@@ -17,6 +17,17 @@
         },
         "runtime": {
           "SchoolManagement.MVC.dll": {}
+        },
+        "resources": {
+          "en-us/SchoolManagement.MVC.resources.dll": {
+            "locale": "en-us"
+          },
+          "es-es/SchoolManagement.MVC.resources.dll": {
+            "locale": "es-es"
+          },
+          "it-it/SchoolManagement.MVC.resources.dll": {
+            "locale": "it-it"
+          }
         }
       },
       "AspNetCoreHero.ToastNotification/1.1.0": {

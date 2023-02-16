@@ -1,18 +1,20 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
 @model SchoolManagement.MVC.Data.Student
 
 @{
-    ViewData["Title"] = "Detalles del Estudiante";
+    ViewData["Title"] = verRecurso["texto3"];
 }
 
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Students" asp-action="Index">Estudiantes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Detalles del Estudiante</li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecurso["texto"]</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Students" asp-action="Index">@verRecurso["texto2"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecurso["texto3"]</li>
     </ol>
 </nav>
 
-<h2>Detalles del Estudiante</h2>
+<h2>@verRecurso["texto3"]</h2>
 
 <div>
     <hr />
@@ -22,19 +24,19 @@
             <div class="card-body">
                 <dl class="row">
                     <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.FirstName)
+                        @verRecurso["texto4"]
                     </dt>
                     <dd class="col-sm-6">
                         @Html.DisplayFor(model => model.FirstName)
                     </dd>
                     <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.LastName)
+                        @verRecurso["texto5"]
                     </dt>
                     <dd class="col-sm-6">
                         @Html.DisplayFor(model => model.LastName)
                     </dd>
                     <dt class="col-sm-6">
-                        @Html.DisplayNameFor(model => model.DateOfBirth)
+                        @verRecurso["texto6"]
                     </dt>
                     <dd class="col-sm-6">
                         @Html.DisplayFor(model => model.DateOfBirth)
@@ -50,7 +52,7 @@
 
 <div>
     <center>
-        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
-        <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@Model?.Id">@verRecurso["texto7"]</a>
+        <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">@verRecurso["texto8"]</a>
     </center>
 </div>

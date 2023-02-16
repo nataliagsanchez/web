@@ -1,29 +1,31 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
 @model SchoolManagement.MVC.Models.ClassEnrollmentViewModel
 
 @{
-    ViewData["Title"] = "Gestionar Matrículas";
+    ViewData["Title"] = verRecurso["texto2"];
 }
 
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-        <li class="breadcrumb-item active"><a asp-area="" asp-controller="Classes" asp-action="Index">Clases</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Gestionar Matriculas</li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecurso["texto"]</a></li>
+        <li class="breadcrumb-item active"><a asp-area="" asp-controller="Classes" asp-action="Index">@verRecurso["texto1"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecurso["texto2"]</li>
     </ol>
 </nav>
 
-<h3>Gestion de Matriculas para la sesión de @Model.Class?.Time de la asignatura @Model.Class?.Course?.Name</h3>
-<h4>Profesor: @Model.Class?.Lecturer?.FirstName @Model.Class?.Lecturer?.LastName</h4>
+<h3>@verRecurso["texto3"] @Model.Class?.Course?.Name</h3>
+<h4>@verRecurso["texto4"] @Model.Class?.Lecturer?.FirstName @Model.Class?.Lecturer?.LastName</h4>
 
 <hr />
-<h3>Lista de Estudiantes</h3>
+<h3>@verRecurso["texto10"]</h3>
 
 <table class="table  table-striped" style="background-color: #f2f8fd">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Acción</th>
+            <th>@verRecurso["texto5"]</th>
+            <th>@verRecurso["texto6"]</th>
+            <th>@verRecurso["texto7"]</th>
         </tr>
     </thead>
     <tbody>
@@ -34,7 +36,7 @@
                 <td>@student.LastName</td>
                 <td>
                     @{
-                        string btnText = student.IsEnrolled ? "Eliminar" : "Añadir";
+                        var btnText = student.IsEnrolled ? verRecurso["texto8"] : verRecurso["texto9"];
                         string btnClass = student.IsEnrolled ? "danger" : "success";
                         bool shouldEnroll = !student.IsEnrolled;
                     }

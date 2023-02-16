@@ -3,7 +3,7 @@
     background-color: #FFFCFF;
 }
 
-#header {
+#encabezado {
     padding: 10px;
     color: #d36c6c;
     font-size: 26px;
@@ -12,22 +12,22 @@
     justify-content: space-between;
 }
 
-    #header button {
+    #encabezado button {
         background-color: #92a1d1;
     }
 
-#container {
+#contenedor {
     width: 70%;
     margin-left:16%;
 }
 
-#weekdays {
+#days {
     width: 100%;
     display: flex;
     color: #247BA0;
 }
 
-    #weekdays div {
+    #days div {
         width: 100%;
         padding: 1.2%;
     }
@@ -78,17 +78,7 @@
 }
 
 #newEventModal, #deleteEventModal {
-    display: none;
-    z-index: 20;
-    padding: 25px;
-    background-color: #e8f4fa;
-    box-shadow: 0px 0px 3px black;
-    border-radius: 5px;
-    width: 350px;
-    top: 100px;
-    left: calc(50% - 175px);
-    position: absolute;
-    font-family: sans-serif;
+   padding: 12%;
 }
 
 #eventTitleInput {
@@ -106,16 +96,22 @@
         border: 2px solid red;
     }
 
+#eventBodyInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
 #cancelButton, #deleteButton {
-    background-color: #d36c6c;
+    background-color: #9c0000;
 }
 
 #saveButton, #closeButton {
-    background-color: #92a1d1;
-}
-
-#eventText {
-    font-size: 14px;
+    background-color: #1761ab;
 }
 
 #modalBackDrop {

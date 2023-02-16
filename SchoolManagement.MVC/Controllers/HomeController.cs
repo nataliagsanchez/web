@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Mvc;
 using SchoolManagement.MVC.Models;
 using System.Diagnostics;
 
@@ -27,6 +29,17 @@ namespace SchoolManagement.MVC.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult EstablecerCultura(string nuevaCultura, string retornarUrl) {
+            Response.Cookies.Append(
+                    CookieRequestCultureProvider.DefaultCookieName,
+                    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(nuevaCultura)),
+                    new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(5) }
+                );
+
+            return LocalRedirect(retornarUrl);
         }
     }
 }

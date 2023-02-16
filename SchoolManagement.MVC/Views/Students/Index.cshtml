@@ -1,32 +1,34 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
 @model IEnumerable<SchoolManagement.MVC.Data.Student>
 
 @{
-    ViewData["Title"] = "Estudiantes";
+    ViewData["Title"] = verRecurso["texto2"];
 }
 
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Estudiantes</li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecurso["texto"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecurso["texto2"]</li>
     </ol>
 </nav>
 
-<h1>Estudiantes</h1>
+<h1>@verRecurso["texto2"]</h1>
 
 <p>
-    <a class="btn text-light" style="background-color: #286ce6" asp-action="Create">Nuevo Estudiante</a>
+    <a class="btn text-light" style="background-color: #286ce6" asp-action="Create">@verRecurso["texto3"]</a>
 </p>
 <table class="table  table-striped" style="background-color: #f2f8fd">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+                @verRecurso["texto4"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                @verRecurso["texto5"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateOfBirth)
+                @verRecurso["texto6"]
             </th>
             <th></th>
         </tr>
@@ -46,9 +48,9 @@
                 </td>
                 <td>
                     <center>
-                        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                        <a class="btn text-light" style="background-color: #286ce6" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
-                        <button data-id="@item.Id" class="btn text-light deleteBtn" style="background-color: #286ce6" type="button">Eliminar</button>
+                        <a class="btn text-light" style="background-color: #286ce6" asp-action="Edit" asp-route-id="@item.Id">@verRecurso["texto7"]</a>
+                        <a class="btn text-light" style="background-color: #286ce6" asp-action="Details" asp-route-id="@item.Id">@verRecurso["texto8"]</a>
+                        <button data-id="@item.Id" class="btn text-light deleteBtn" style="background-color: #286ce6" type="button">@verRecurso["texto9"]</button>
                     </center>
                 </td>
             </tr>

@@ -1,47 +1,79 @@
-﻿@{
-    ViewData["Title"] = "Calendario";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
+
+@{
+    ViewData["Title"] = verRecurso["texto19"];
 }
 
 <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
 
-<div id="container">
-    <div id="header">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecurso["texto18"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecurso["texto19"]</li>
+    </ol>
+</nav>
+
+<div id="contenedor">
+    <div id="encabezado">
         <div id="monthDisplay"></div>
         <div>
-            <button type="button" class="btn" id="backButton">Anterior</button>
-            <button type="button" class="btn" id="nextButton">Siguiente</button>
+            <button type="button" class="btn" id="backButton" style="color: white">@verRecurso["texto"]</button>
+            <button type="button" class="btn" id="nextButton" style="color: white">@verRecurso["texto2"]</button>
         </div>
     </div>
 
-    <div id="weekdays">
-        <div>Lunes</div>
-        <div>Martes</div>
-        <div>Miércoles</div>
-        <div>Jueves</div>
-        <div>Viernes</div>
-        <div>Sábado</div>
-        <div>Domingo</div>
+    <div id="days">
+        <div>@verRecurso["texto3"]</div>
+        <div>@verRecurso["texto4"]</div>
+        <div>@verRecurso["texto5"]</div>
+        <div>@verRecurso["texto6"]</div>
+        <div>@verRecurso["texto7"]</div>
+        <div>@verRecurso["texto8"]</div>
+        <div>@verRecurso["texto9"]</div>
     </div>
 
     <div id="calendar"></div>
 </div>
 
-<div id="newEventModal">
-    <h2>Nuevo Evento</h2>
+<div id="newEventModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">@verRecurso["texto10"]</div>
+            </div>
 
-    <input id="eventTitleInput" placeholder="Nombre del Evento"/>
+            <div class="modal-body">
+                <input id="eventTitleInput" placeholder="@verRecurso["texto11"]" />
+                <input id="eventBodyInput" placeholder="@verRecurso["texto12"]" />
+            </div>
 
-    <button id="saveButton" class="btn">Guardar</button>
-    <button id="cancelButton" class="btn">Cancelar</button>
+            <div class="modal-footer">
+                <button id="saveButton" class="btn" style="color: white">@verRecurso["texto13"]</button>
+                <button id="cancelButton" class="btn" style="color: white">@verRecurso["texto14"]</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="deleteEventModal">
-    <center><h3>Evento</h3></center>
+<div id="deleteEventModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">@verRecurso["texto15"]</div>
+            </div>
 
-    <p id="eventText"></p>
+            <div class="modal-body">
+                <h3 id="eventText" style="word-break:break-word"></h3>
+                <p id="eventDescription" style="word-break:break-word"></p>
+            </div>
 
-    <button id="deleteButton" class="btn">Borrar</button>
-    <button id="closeButton" class="btn">Cerrar</button>
+            <div class="modal-footer">
+                <button id="deleteButton" class="btn" style="color: white">@verRecurso["texto16"]</button>
+                <button id="closeButton" class="btn" style="color: white">@verRecurso["texto17"]</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="modalBackDrop"></div>

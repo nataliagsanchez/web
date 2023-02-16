@@ -1,4 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IOptions<RequestLocalizationOptions> LocalizationOptions
+
+@{
+    var solicitarCultura = Context.Features.Get<IRequestCultureFeature>();
+
+    var listaCulturas = LocalizationOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName }).ToList();
+
+    var urlActual = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+}
+
+@inject IViewLocalizer verRecurso
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="~/favicon.jpg" />
@@ -23,35 +40,35 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Respecto al Curso</a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">@verRecurso["texto"]</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Courses" asp-action="Index"><center>Asignaturas</center></a>
+                                    <a class="nav-link" asp-area="" asp-controller="Courses" asp-action="Index"><center>@verRecurso["texto2"]</center></a>
                                 </li>
                                 <li><hr></li>
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Classes" asp-action="Index"><center>Clases</center></a>
+                                    <a class="nav-link" asp-area="" asp-controller="Classes" asp-action="Index"><center>@verRecurso["texto3"]</center></a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Nuestro Personal y Alumnado</a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">@verRecurso["texto4"]</a>
                             <ul class="dropdown-menu w-100">
                                 <li>
-                                    <a class="nav-link" asp-area="" asp-controller="Lecturers" asp-action="Index"><center>Profesores</center></a>
+                                    <a class="nav-link" asp-area="" asp-controller="Lecturers" asp-action="Index"><center>@verRecurso["texto5"]</center></a>
                                 </li>
                                 <li><hr></li>
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Students" asp-action="Index"><center>Estudiantes</center></a>
+                                    <a class="nav-link" asp-area="" asp-controller="Students" asp-action="Index"><center>@verRecurso["texto6"]</center></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">Gestión de Eventos</a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown">@verRecurso["texto7"]</a>
                             <ul class="dropdown-menu w-100">
                                 <li>
-                                    <a class="nav-link" asp-area="" asp-controller="Calendar" asp-action="Index"><center>Calendario</center></a>
+                                    <a class="nav-link" asp-area="" asp-controller="Calendar" asp-action="Index"><center>@verRecurso["texto8"]</center></a>
                                 </li>
                             </ul>
                         </li>
@@ -68,8 +85,14 @@
     </div>
     <br />
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - School Management App MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Nuestras Políticas de Pivacidad</a>
+        <div class="piePagina col-6">
+            ㅤ&copy; @DateTime.Now.Year - School Management App MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">@verRecurso["texto9"]</a>
+        </div>
+        <div class="piePagina col-2" id="desplegable">
+            <form class="d-flex" asp-controller="Home" asp-action="EstablecerCultura" asp-route-retornarUrl="@urlActual">
+                <select name="nuevaCultura" asp-for="@solicitarCultura.RequestCulture.UICulture.Name" asp-items="listaCulturas" onchange="this.form.submit()">
+                </select>
+            </form>
         </div>
     </footer>
 

@@ -1,14 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Nuestras Politicas de Privacidad";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecursos
+@{
+    ViewData["Title"] = verRecursos["texto"];
 }
 
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Privacidad</li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecursos["texto6"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecursos["texto7"]</li>
     </ol>
 </nav>
 
-<h1>@ViewData["Title"]</h1>
+<h3>@ViewData["Title"]</h3>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<br />
+
+<center><h5>@verRecursos["texto2"]</h5></center>
+
+<div class="formateando" align="center">
+        @verRecursos["texto3"]
+</div>
+
+<br />
+
+<center><h5>@verRecursos["texto4"]</h5></center>
+
+<div class="formateando" align="center">
+        @verRecursos["texto5"]
+</div>

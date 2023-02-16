@@ -9,12 +9,13 @@ let clicked = null;
 //Array de objetos "event". Si existe, que lo convierta, si no existe, que cree el array.
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
- 
+
 const calendario = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
+const eventBodyInput = document.getElementById('eventBodyInput');
 const diasSemana = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'];
 
 /*Bloque de funciones.*/
@@ -27,6 +28,7 @@ function openModal(date) {
     //Si existe un evento en el día pinchado, que muestre el evento y permita eliminarlo si se desea.
     if (event) {
         document.getElementById('eventText').innerText = event.title;
+        document.getElementById('eventDescription').innerText = event.description;
         deleteModal.style.display = 'block';
     } else {
         newEventModal.style.display = 'block';
@@ -42,7 +44,7 @@ function carga() {
     if (mes !== 0) {
         dt.setMonth(new Date().getMonth() + mes);
     }
-    
+
     const day = dt.getDate();
     const month = dt.getMonth();
     const year = dt.getFullYear();
@@ -99,6 +101,7 @@ function closeModal() {
     deleteModal.style.display = 'none';
     backDrop.style.display = 'none';
     eventTitleInput.value = '';
+    eventBodyInput.value = '';
     clicked = null;
     carga();
 }
@@ -110,12 +113,13 @@ function saveEvent() {
 
         events.push({
             date: clicked,
-            title: eventTitleInput.value
+            title: eventTitleInput.value,
+            description: eventBodyInput.value
         });
 
         localStorage.setItem('events', JSON.stringify(events));
-
         closeModal();
+
     } else {
         eventTitleInput.classList.add('error');
     }

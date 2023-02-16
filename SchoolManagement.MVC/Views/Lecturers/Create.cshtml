@@ -1,18 +1,20 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
 @model SchoolManagement.MVC.Data.Lecturer
 
 @{
-    ViewData["Title"] = "Crear Perfil de Profesor";
+    ViewData["Title"] = verRecurso["texto3"];
 }
 
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-        <li class="breadcrumb-item"><a asp-area="" asp-controller="Lecturers" asp-action="Index">Profesores</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Nuevo Profesor</li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">@verRecurso["texto"]</a></li>
+        <li class="breadcrumb-item"><a asp-area="" asp-controller="Lecturers" asp-action="Index">@verRecurso["texto2"]</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@verRecurso["texto3"]</li>
     </ol>
 </nav>
 
-<h2>Crear Perfil de Profesor</h2>
+<h2>@verRecurso["texto4"]</h2>
 
 <hr />
 <div class="row">
@@ -25,20 +27,20 @@
                         <form asp-action="Create">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-group">
-                                <label asp-for="FirstName" class="control-label"></label>
+                                <label asp-for="FirstName" class="control-label">@verRecurso["texto5"]</label>
                                 <input asp-for="FirstName" class="form-control" />
                                 <span asp-validation-for="FirstName" class="text-danger"></span>
                             </div>
                             <br />
                             <div class="form-group">
-                                <label asp-for="LastName" class="control-label"></label>
+                                <label asp-for="LastName" class="control-label">@verRecurso["texto6"]</label>
                                 <input asp-for="LastName" class="form-control" />
                                 <span asp-validation-for="LastName" class="text-danger"></span>
                             </div>
                             <br />
                             <div class="form-group">
-                                <input type="submit" value="Crear" class="btn text-light" style="background-color: #286ce6" />
-                                <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">Volver a la Lista</a>
+                                <input type="submit" value="@verRecurso["texto7"]" class="btn text-light" style="background-color: #286ce6" />
+                                <a class="btn text-light" style="background-color: #286ce6" asp-action="Index">@verRecurso["texto8"]</a>
                             </div>
                         </form>
                     </div>

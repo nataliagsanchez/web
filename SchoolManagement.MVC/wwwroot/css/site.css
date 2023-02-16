@@ -92,3 +92,19 @@ body {
     height: 32rem;
 }
 
+.piePagina {
+    display: inline-block;
+}
+
+#desplegable {
+    margin-top: 1.5%;
+    float:right;
+}
+
+.formateando {
+    
+    margin-left:25%;
+    width:50%;
+    height:40%;
+
+}

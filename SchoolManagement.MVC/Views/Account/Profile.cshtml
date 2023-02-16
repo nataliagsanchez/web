@@ -1,6 +1,9 @@
-﻿@model SchoolManagement.MVC.Models.UsersProfileViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer verRecurso
+
+@model SchoolManagement.MVC.Models.UsersProfileViewModel
 @{
-    ViewData["Title"] = "Perfil de Usuario";
+    ViewData["Title"] = verRecurso["texto"];
 }
 
 <div class="row">
