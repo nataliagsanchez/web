@@ -29,7 +29,7 @@ namespace SchoolManagement.MVC.Controllers
         {
             return View(new UsersProfileViewModel
             {
-                Name = User.Identity.Name,
+                Name = User.Identity!.Name,
                 EmailAddress = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value,
                 ProfileImage = User.Claims.FirstOrDefault(c => c.Type == "picture")?.Value
             });
@@ -42,7 +42,7 @@ namespace SchoolManagement.MVC.Controllers
                 // Indicate here where Auth0 should redirect the user after a logout.
                 // Note that the resulting absolute Uri must be added to the
                 // **Allowed Logout URLs** settings for the app.
-                .WithRedirectUri(Url.Action("Index", "Home"))
+                .WithRedirectUri(Url.Action("Index", "Home")!)
                 .Build();
 
             await HttpContext.SignOutAsync(Auth0Constants.AuthenticationScheme, authenticationProperties);

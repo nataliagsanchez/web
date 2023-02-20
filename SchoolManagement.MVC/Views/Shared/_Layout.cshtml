@@ -7,7 +7,7 @@
 @{
     var solicitarCultura = Context.Features.Get<IRequestCultureFeature>();
 
-    var listaCulturas = LocalizationOptions.Value.SupportedUICultures
+    var listaCulturas = LocalizationOptions.Value.SupportedUICultures!
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName }).ToList();
 
     var urlActual = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
@@ -90,7 +90,7 @@
         </div>
         <div class="piePagina col-2" id="desplegable">
             <form class="d-flex" asp-controller="Home" asp-action="EstablecerCultura" asp-route-retornarUrl="@urlActual">
-                <select name="nuevaCultura" asp-for="@solicitarCultura.RequestCulture.UICulture.Name" asp-items="listaCulturas" onchange="this.form.submit()">
+                <select name="nuevaCultura" asp-for="@solicitarCultura!.RequestCulture.UICulture.Name" asp-items="listaCulturas" onchange="this.form.submit()">
                 </select>
             </form>
         </div>
