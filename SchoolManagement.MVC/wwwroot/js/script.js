@@ -1,9 +1,6 @@
 ﻿/* Constantes y variables globales */
 
-//Variable que nos permite llevar un seguimiento del mes en el que nos encontramos.
 let mes = 0;
-
-//Día que hemos pinchado dentro del calendario.
 let clicked = null;
 
 //Array de objetos "event". Si existe, que lo convierta, si no existe, que cree el array.
