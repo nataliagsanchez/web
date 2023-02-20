@@ -153,6 +153,9 @@
   <data name="texto2" xml:space="preserve">
     <value>Next</value>
   </data>
+  <data name="texto20" xml:space="preserve">
+    <value>en-us</value>
+  </data>
   <data name="texto3" xml:space="preserve">
     <value>Monday</value>
   </data>

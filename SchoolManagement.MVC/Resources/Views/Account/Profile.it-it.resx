@@ -120,4 +120,10 @@
   <data name="texto" xml:space="preserve">
     <value>Profilo dell'utente</value>
   </data>
+  <data name="texto2" xml:space="preserve">
+    <value>Inizio</value>
+  </data>
+  <data name="texto3" xml:space="preserve">
+    <value>Profilo</value>
+  </data>
 </root>

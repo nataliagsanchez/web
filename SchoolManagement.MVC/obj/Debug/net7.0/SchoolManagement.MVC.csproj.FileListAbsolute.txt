@@ -286,15 +286,12 @@ C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Deb
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\es-ES\SchoolManagement.MVC.resources.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\it-IT\SchoolManagement.MVC.resources.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.csproj.GenerateResource.cache
-C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\es-ES\SchoolManagement.MVC.resources.cs
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\es-ES\SchoolManagement.MVC.resources.dll
-C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\it-IT\SchoolManagement.MVC.resources.cs
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\it-IT\SchoolManagement.MVC.resources.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Index.es-ES.resources
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Index.it-IT.resources
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\bin\Debug\net7.0\en-us\SchoolManagement.MVC.resources.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Index.en-us.resources
-C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\en-us\SchoolManagement.MVC.resources.cs
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\en-us\SchoolManagement.MVC.resources.dll
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Shared._Layout.en-us.resources
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Shared._Layout.es-es.resources
@@ -359,3 +356,6 @@ C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Deb
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Privacy.en-us.resources
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Privacy.es-es.resources
 C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\SchoolManagement.MVC.Resources.Views.Home.Privacy.it-it.resources
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\en-us\SchoolManagement.MVC.resources.cs
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\es-es\SchoolManagement.MVC.resources.cs
+C:\Users\GarciaSN\source\repos\SchoolManagement.MVC\SchoolManagement.MVC\obj\Debug\net7.0\it-it\SchoolManagement.MVC.resources.cs
