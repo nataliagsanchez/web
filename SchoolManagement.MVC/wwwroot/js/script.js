@@ -74,6 +74,7 @@ function carga() {
 
             const event = events.find(e => e.date === fechaDia);
 
+
             if (event) {
                 eventDiv = document.createElement('div');
                 eventDiv.classList.add('event');
