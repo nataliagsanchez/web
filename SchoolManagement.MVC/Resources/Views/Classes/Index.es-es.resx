@@ -123,6 +123,21 @@
   <data name="texto10" xml:space="preserve">
     <value>Gestionar Matrículas</value>
   </data>
+  <data name="texto11" xml:space="preserve">
+    <value>¿Estás seguro?</value>
+  </data>
+  <data name="texto12" xml:space="preserve">
+    <value>No se podrán revertir los cambios</value>
+  </data>
+  <data name="texto13" xml:space="preserve">
+    <value>Sí, deseo borrarlo</value>
+  </data>
+  <data name="texto14" xml:space="preserve">
+    <value>¡Eliminado!</value>
+  </data>
+  <data name="texto15" xml:space="preserve">
+    <value>Se ha eliminado con éxito.</value>
+  </data>
   <data name="texto2" xml:space="preserve">
     <value>Clases</value>
   </data>

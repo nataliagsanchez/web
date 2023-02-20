@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreHero.ToastNotification.Abstractions;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SchoolManagement.MVC.Data;
 using SchoolManagement.MVC.Models;
+
 
 namespace SchoolManagement.MVC.Controllers
 {
@@ -67,6 +69,7 @@ namespace SchoolManagement.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,LecturerId,CourseId,Time")] Class @class)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Add(@class);

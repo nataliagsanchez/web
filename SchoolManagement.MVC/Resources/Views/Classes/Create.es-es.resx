@@ -120,6 +120,9 @@
   <data name="texto" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="texto10" xml:space="preserve">
+    <value>Clase creada con éxito</value>
+  </data>
   <data name="texto2" xml:space="preserve">
     <value>Clases</value>
   </data>

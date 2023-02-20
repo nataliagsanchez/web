@@ -120,6 +120,9 @@
   <data name="texto" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="texto10" xml:space="preserve">
+    <value>Class successfully created</value>
+  </data>
   <data name="texto2" xml:space="preserve">
     <value>Classes</value>
   </data>
