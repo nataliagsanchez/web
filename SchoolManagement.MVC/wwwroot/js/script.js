@@ -7,8 +7,7 @@ let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
 
-const calendar = document.getElementById('calendar');
-const monthDisplay = document.getElementById('monthDisplay');
+const calendario = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
 const deleteModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
@@ -60,7 +59,7 @@ function carga() {
 
     const paddingDays = diasSemana.indexOf(dateString.split(', ')[0]);
 
-    monthDisplay.innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
+    document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
     calendario.innerHTML = ''; //El contenido del calendario (los cuadrados de cada día) se vacía.
 
@@ -88,7 +87,7 @@ function carga() {
             daySquare.classList.add('padding');
         }
 
-        calendar.appendChild(daySquare);
+        calendario.appendChild(daySquare);
     }
 }
 
