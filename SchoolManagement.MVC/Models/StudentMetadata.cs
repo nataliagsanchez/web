@@ -12,6 +12,8 @@ public class StudentMetadata
     [Display(Name = "Apellido")]
     public string LastName { get; set; } = null!;
     [Display(Name = "Fecha de Nacimiento")]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
     public DateTime? DateOfBirth { get; set; }
 }
 
