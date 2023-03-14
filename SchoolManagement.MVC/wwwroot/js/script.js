@@ -61,7 +61,7 @@ function carga() {
 
     document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
-    calendario.innerHTML = ''; //El contenido del calendario (los cuadrados de cada día) se vacía.
+    calendario.innerHTML = ''; //El contenido del calendario (los cuadrados de cada día) se rellena con nada.
 
     for (let i = 1; i <= paddingDays + daysInMonth; i++) {
         const daySquare = document.createElement('div');
